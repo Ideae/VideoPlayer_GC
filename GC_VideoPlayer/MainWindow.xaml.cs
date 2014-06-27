@@ -52,6 +52,8 @@ namespace GC_VideoPlayer
                 return;
             }
             location = txtLocation.Text;
+            webRequest = WebRequest.Create(siteUrl + "?action=write&status=inactive&location=" + location);
+            webRequest.GetResponse();
             InitializeVideoPlayer();
         }
         void InitializeVideoPlayer()
@@ -89,7 +91,7 @@ namespace GC_VideoPlayer
             
 
             //VideoPlayer.Open(new Uri(@"c:\example.wmv", UriKind.Absolute));
-            VideoPlayer.SpeedRatio = 3;
+            VideoPlayer.SpeedRatio = 1;
             VideoPlayer.MediaOpened += (sender, e) => Resize();
             VideoPlayer.MediaEnded += (sender, e) => MediaFinished();
             OpenVideo(loopUri);
@@ -101,12 +103,14 @@ namespace GC_VideoPlayer
 
             timer.Interval = updateInterval;
             timer.Tick += (sender, e) => Update();
+
             timer.Start();
         }
 
 
         void Update()
         {
+            Console.WriteLine("updating..");
             string response = MakeWebRequest();
             if (response != null)
             {
@@ -127,6 +131,7 @@ namespace GC_VideoPlayer
         }
         string MakeWebRequest()
         {
+            webRequest.Abort();
             webRequest = WebRequest.Create(siteUrl + "?action=read&status=yoyo&location=" + location);
             Stream responseStream = webRequest.GetResponse().GetResponseStream();
             StreamReader streamReader = new StreamReader(responseStream);
@@ -141,24 +146,31 @@ namespace GC_VideoPlayer
         void OpenVideo(Uri uri)
         {
             currentUri = uri;
+            VideoPlayer.Stop();
+            VideoPlayer.Close();
             VideoPlayer.Open(uri);
             VideoPlayer.Play();
         }
         void MediaFinished()
         {
+            Console.WriteLine("mediafinished : " + currentUri);
             if (activated)
             {
-                activated = false;
-                OpenVideo(loopUri);
+                webRequest.Abort();
                 webRequest = WebRequest.Create(siteUrl + "?action=write&status=inactive&location=" + location);
                 webRequest.GetResponse();
                 Console.WriteLine("it has been deactivated");
+                OpenVideo(loopUri);
+                //VideoPlayer.MediaEnded += (sender, e) => MediaFinished();
+                activated = false;
             }
             else
             {
                 //OpenVideo(currentUri);
-                OpenVideo(loopUri);
+                VideoPlayer.Position = TimeSpan.Zero;
             }
+            
+
         }
 
         void window_MouseDoubleClick(object sender, MouseButtonEventArgs e)

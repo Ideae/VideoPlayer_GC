@@ -1,0 +1,16 @@
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\bin\Debug\GC_VideoPlayer.exe.config
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\bin\Debug\GC_VideoPlayer.exe
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\bin\Debug\GC_VideoPlayer.pdb
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\GC_VideoPlayer.csprojResolveAssemblyReference.cache
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\MainWindow.baml
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\MainWindow.g.cs
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\App.g.cs
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\GC_VideoPlayer_MarkupCompile.cache
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\GC_VideoPlayer.g.resources
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\GC_VideoPlayer.Properties.Resources.resources
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\GC_VideoPlayer.csproj.GenerateResource.Cache
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\GC_VideoPlayer.exe
+c:\users\zack\documents\visual studio 2013\Projects\GC_VideoPlayer\GC_VideoPlayer\obj\Debug\GC_VideoPlayer.pdb
+C:\Users\Zack\Documents\Visual Studio 2013\Projects\VideoPlayer_GC\GC_VideoPlayer\bin\Debug\GC_VideoPlayer.exe.config
+C:\Users\Zack\Documents\Visual Studio 2013\Projects\VideoPlayer_GC\GC_VideoPlayer\obj\Debug\GC_VideoPlayer.exe
+C:\Users\Zack\Documents\Visual Studio 2013\Projects\VideoPlayer_GC\GC_VideoPlayer\obj\Debug\GC_VideoPlayer.pdb

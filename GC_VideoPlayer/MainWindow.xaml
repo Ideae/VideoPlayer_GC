@@ -1,0 +1,34 @@
+﻿<Window x:Class="GC_VideoPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" KeyDown="Window_KeyDown_1">
+    <Grid>
+
+        <Rectangle Name="VideoDisplay" Width="320" Height="240" Margin="187,60,10,20">
+            <Rectangle.Fill>
+                <DrawingBrush>
+                    <DrawingBrush.Drawing>
+                        <VideoDrawing>
+                            <VideoDrawing.Player>
+                                <MediaPlayer x:Name="VideoPlayer" />
+                            </VideoDrawing.Player>
+                            <VideoDrawing.Rect>
+                                <Rect Width="320" Height="240" />
+                            </VideoDrawing.Rect>
+                        </VideoDrawing>
+                    </DrawingBrush.Drawing>
+                </DrawingBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Location" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtLocation" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Locate video files:" HorizontalAlignment="Left" Margin="0,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Looping video" HorizontalAlignment="Left" Margin="12,123,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="9,246,0,0" VerticalAlignment="Top" Width="75" Click="btnSubmit_Click"/>
+        <Button x:Name="btnBrowseLooping" Content="Browse" HorizontalAlignment="Left" Margin="12,149,0,0" VerticalAlignment="Top" Width="53" Click="btnBrowseLooping_Click"/>
+        <Label x:Name="lblLooping" Content="none" HorizontalAlignment="Left" Margin="65,147,0,0" VerticalAlignment="Top"/>
+        <Label Content="Activated video" HorizontalAlignment="Left" Margin="12,179,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnBrowseActivated" Content="Browse" HorizontalAlignment="Left" Margin="12,205,0,0" VerticalAlignment="Top" Width="53" Click="btnBrowseActivated_Click"/>
+        <Label x:Name="lblActivated" Content="none" HorizontalAlignment="Left" Margin="65,203,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
